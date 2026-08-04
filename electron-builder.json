@@ -19,24 +19,11 @@
       {
         "target": "portable",
         "arch": ["x64"]
-      },
-      {
-        "target": "nsis",
-        "arch": ["x64"]
       }
     ],
-    "artifactName": "${productName}_${version}.${ext}"
+    "artifactName": "TwitchChatOverlay.exe"
   },
   "portable": {
     "artifactName": "TwitchChatOverlay.exe"
-  },
-  "nsis": {
-    "oneClick": false,
-    "perMachine": false,
-    "allowToChangeInstallationDirectory": true,
-    "deleteAppDataOnUninstall": false,
-    "shortcutName": "Twitch Chat Overlay",
-    "createDesktopShortcut": true,
-    "createStartMenuShortcut": true
   }
 }
