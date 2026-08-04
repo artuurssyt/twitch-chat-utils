@@ -1,0 +1,110 @@
+/* Clip / shorts chat popup bubble */
+
+.popup-stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background: transparent;
+  overflow: hidden;
+}
+
+.popup-bubble {
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: Inter, "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #ffffff;
+  border-style: solid;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.popup-bubble--solid {
+  /* background set inline via rgba */
+}
+
+.popup-bubble--frosted {
+  /* Preview: real backdrop blur against stage / checkerboard */
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
+}
+
+/* Export-safe frosted look (no live video behind PNG) */
+.popup-bubble--frosted.popup-bubble--export {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)),
+    linear-gradient(135deg, rgba(40, 40, 48, 0.55), rgba(12, 12, 16, 0.72));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.popup-username {
+  font-weight: 700;
+}
+
+.popup-username--paint {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.popup-colon {
+  color: #ffffff;
+  font-weight: 700;
+  margin-right: 0.35em;
+  -webkit-text-fill-color: #ffffff;
+}
+
+.popup-message {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.popup-badge {
+  display: inline-block;
+  width: 1.05em;
+  height: 1.05em;
+  margin-right: 0.25em;
+  vertical-align: -0.15em;
+  border-radius: 2px;
+}
+
+.popup-emote {
+  display: inline-block;
+  height: 1.35em;
+  width: auto;
+  vertical-align: -0.25em;
+  margin: 0 1px;
+  object-fit: contain;
+}
+
+.popup-emoji {
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.popup-link {
+  color: #bf94ff;
+  text-decoration: none;
+}
+
+.popup-mention {
+  color: #dedee3;
+  background: rgba(145, 71, 255, 0.18);
+  border-radius: 3px;
+  padding: 0 3px;
+}
